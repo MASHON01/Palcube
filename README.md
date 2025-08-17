@@ -20,7 +20,7 @@ A production-ready automation system that creates Jira tickets and GitHub reposi
 - Slack App with Socket Mode enabled
 - Jira Cloud instance with API access
 - GitHub account with Personal Access Token
-- IBM Watsonx Orchestrate (optional, for enhanced AI features)
+- IBM Watsonx Orchestrate (for enhanced AI features)
 
 ## 🛠️ Installation
 
