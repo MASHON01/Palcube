@@ -1,0 +1,24 @@
+services:
+  slack-jira-github-automation:
+    build: .
+    container_name: slack-jira-github-automation
+    restart: unless-stopped
+    environment:
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - SLACK_APP_TOKEN=${SLACK_APP_TOKEN}
+      - JIRA_URL=${JIRA_URL}
+      - JIRA_USERNAME=${JIRA_USERNAME}
+      - JIRA_API_TOKEN=${JIRA_API_TOKEN}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - GITHUB_USERNAME=${GITHUB_USERNAME}
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - automation-network
+
+networks:
+  automation-network:
+    driver: bridge
+
+volumes:
+  logs:
